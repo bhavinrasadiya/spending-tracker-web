@@ -1,0 +1,51 @@
+<script>
+    function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  document.getElementById('image').src =  e.target.result;
+    };
+
+          reader.readAsDataURL(input.files[0]);
+    }
+    }
+
+</script>
+<div class="main">
+  <form class="box">
+      <div class="navbar">
+           <p class="header">Your Account</p> 
+      </div>
+
+      <div class="part">
+            <!-- <div class="first-side"> 
+                <img  src="../assets/image.jpg" class="profile-Image" height="125" width="123" id="image" class="ab">
+                <div class="choose_file">
+                        <span>Choose File</span>
+                        <input type="file" id="profileImage" onchange="readURL(this);">
+                  </div>
+            </div> -->
+            <div class="second-side">
+                  <label class="lbl" for="exampleInputEmail1">Group id</label>
+                  <input type="email" class="control" aria-describedby="emailHelp"  disabled>
+
+                  <label class="lbl" for="exampleInputEmail1">Group Name</label>
+                  <input type="email" class="control" aria-describedby="emailHelp" placeholder="Enter Group Name">
+
+                <label class="lbl" for="exampleInputEmail1">Password</label>
+                <input  class="control" aria-describedby="emailHelp" type="password" placeholder="Enter Password">
+                <br>
+                  <div class="btn-group ">
+                        <button _ngcontent-c1="" class="btn" routerLink="/login" type="button" tabindex="0">Save</button>
+                        <button _ngcontent-c1="" class="btn" routerLink="/login" type="button" tabindex="0">Cancel </button>
+                  </div>
+            </div>
+    </div>
+</form>
+</div>      
+
+
+
+
+
+

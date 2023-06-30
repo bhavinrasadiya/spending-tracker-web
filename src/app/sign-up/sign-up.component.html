@@ -1,0 +1,38 @@
+<div id="main">
+  <div class="loginbox">
+    <img src="../assets//avatar.png" class="avatar">
+    <div class="header">Sign Up Here</div>
+    <form [formGroup]="signupForm">
+      <p class="txtheader"> Group Name</p>
+      <input type="text" name="" class="txt" formControlName="group_name" placeholder="Enter Your Group Name" onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'Enter Your Group Name'">
+
+      <p class="txtheader">Group Id</p>
+      <input type="text" name="" placeholder="Enter Your Group Id" class="txt" formControlName="group_id" onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'Enter Your Group Id'">
+
+      <p class="txtheader">Password</p>
+      <input type="password" name="" placeholder="Enter Password" class="txt" formControlName="password" onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'Enter Password'">
+
+      <p class="txtheader">Confirm Password</p>
+      <input type="password" name="" placeholder="Re-enter Password" class="txt" formControlName="confirmpassword"
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Re-enter Password'">
+
+      <input type="button" name="" value="Sign Up" class="btn" (click)="signup()">
+
+      <a routerLink="/login" class="login">I have an Already account ?</a>
+    </form>
+  </div>
+</div>
+<ng-template #template>
+  <div class="modal-header">
+    <h5 class="modal-title pull-left" id="alert">Sign Up</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p class="alert">{{msg}}</p>
+  </div>
+</ng-template>

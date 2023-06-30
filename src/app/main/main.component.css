@@ -1,0 +1,193 @@
+.main{
+    margin-top: 0;
+}
+#logo{
+    
+	margin-left:55px;
+	margin-right:0px;
+    padding: 0px;
+    font-size: 32px;
+    margin-bottom:0px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding-bottom: 2px;    
+}
+
+
+.navbar {
+    display: -ms-flexbox;
+    display: flex;
+    height: 57px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: #5bc5a7;
+}
+#navbar
+{
+    position: fixed;
+    width: 100%;
+
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+   
+    font-size:35px;
+    line-height: inherit;
+    white-space: nowrap;
+    margin-left: 113px;
+}
+.nav
+{
+    margin-bottom: 20px;
+}
+/*========================== container  ==================================*/
+.p {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+       word-spacing: 30px;
+}
+.btn {
+  display: inline-block;
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border:border-width solid transparent;
+  margin-right: 200px;
+  color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+
+}
+
+
+#btn1
+
+{
+    margin-right: 10px;
+    border-radius: 10px;
+
+}
+#btn2
+{
+    margin-right: 75px;
+    border-radius: 10px;
+    margin-left: 10px;  
+}
+
+
+
+.heading1 
+{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 85px;
+    margin-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 20px;
+    line-height: 26px;
+
+}
+
+.heading2 
+{
+    text-align: center;
+      font-size: 21px;
+    margin-top: 12px;
+
+    padding-left: 18px;
+    padding-right: 20px;
+    line-height: 26px;
+
+}
+/*================================slider ===============================*/
+.slide{
+    width: 50%;
+    white-space: nowrap;
+   margin-left: auto;
+   margin-right: 32%;
+    position: relative;
+    box-sizing: border-box;
+    height: 430px;
+    padding: 23px 0; 
+}
+.img1
+{
+    height: 370px;
+    width: 620px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+     -ms-transition: all 1s ease;
+         transition: all 1s ease;
+}
+
+.img1:hover{
+  
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  height: 410px;
+  width: 650px;
+	}
+	.img2
+{
+    height: 380px;
+    margin-left: 20px;
+    width: 190px;
+    -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.img2:hover{
+  
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  height: 400px;
+  width: 200px;
+}
+/*=====================================Sign up Button ================================*/
+.signup {
+ 
+  width: 230px;
+  height: 50px;
+  color: #fff;
+  background-color: #ff652f;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  padding: 0px 20px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+#mbtn
+{
+  text-align: center;
+}
+.footer
+{
+    height: 75px;
+    width: 100%;
+    background-color:#5bc5a7;
+    
+}
+.footer p{
+    text-align: center; 
+    padding-top: 22px;
+    color: white;
+}
+

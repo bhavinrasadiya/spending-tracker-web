@@ -1,0 +1,191 @@
+<div class="main">
+		<div id="navbar1">
+		<nav class="nav">
+  				<a href="#"><img class="navbar-brand" id="logo" src="../assets/logo.png"></a>
+  				<div id ="mbtn">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   Settings
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						  <a class="dropdown-item" routerLink="/account">Your Account</a>
+						  <a class="dropdown-item" routerLink="/signup">Create Group</a>
+						  <a class="dropdown-item" routerLink="/addfriend">Add Friends</a>
+						  <a class="dropdown-item" routerLink="/expense-report">expense report</a>
+						  <a class="dropdown-item" (click)="logout()">Log out</a>
+						</div>
+					  </div>		 
+				  </div>
+		</nav>			
+	</div>	
+
+       <div class="row">
+ 			<div class="first">
+				<div class="a">
+					<div class="usermain">		
+							<ul class="friends">
+										<li class="user1"> <p class="fname">GROUP NAME</p></li>
+									
+									
+								</ul>	 
+					<ul class="friends">
+								<a  class="view-link">
+									<li class="user"><img src="./assets/group_icon.png" class="userimg"> <p class="fname">{{group_name}}</p></li>
+								</a>
+							</ul>
+						</div>
+
+						<div class="usermain">
+								<ul class="friends">
+											<li class="user1"> <p class="fname">FRIENDS NAME</p></li>
+										
+						
+									</ul>	 		 
+							<ul class="friends">
+										<a  class="view-link" *ngFor="let friend of allFriends">
+											<li class="user"><img src="./assets/user.png" class="userimg"> <p class="fname">{{friend.frd_name}}</p></li>
+										</a>
+										
+									
+									</ul>
+								</div>
+					</div>
+</div>
+
+    		<div class="second">
+    		<div class="second1">
+					<div class="userpart">
+						<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Bill</button>
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							   <div class="modal-dialog" role="document">
+									
+								<div class="popup-content">
+										<div class="popup-header">
+											<h5 class="modal-title" id="exampleModalLabel">Add Bill</h5>
+										</div>
+										<br>
+
+
+										<div class="adjust">
+											<div class="input-group mb-3">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="inputGroup-sizing-default" ><img class="item" src="./assets/item.png"></span>
+														<input type="text" class="form-control" aria-label="Sizing example input" [(ngModel)]="description" placeholder="Enter a description" aria-describedby="inputGroup-sizing-default">
+													</div>
+											</div>
+
+											<div class="input-group mb-3">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="inputGroup-sizing-default" ><img class="item" src="./assets/rupee.png"></span>
+														<input type="text" class="form-control" (change)="onChange($event)" [(ngModel)]="amount" placeholder="0.00" aria-describedby="inputGroup-sizing-default">
+													</div>
+											</div>
+
+											<div class="human_summary">Paid by 
+												 <select [(ngModel)]="payer">
+													<option *ngFor="let friend of allFriends" [value]="friend.frd_id"><p>{{friend.frd_name}}</p></option>													
+												  </select>
+											and split
+											<div class="btn-group">
+												<nav id="primary_nav_wrap">
+												  <ul>
+													<li><a id="divide">equally</a>
+													  <ul>														  
+														  <li *ngFor="let friend of allFriends"><a><input type="checkbox" checked id="{{friend.frd_id}}" (change)="addToExpense($event)"><label  class="xyz" for="{{friend.frd_id}}">{{friend.frd_name}}</label></a></li>                                                              													  
+														</ul>
+													</li>
+												  </ul>
+												  </nav>
+											  </div> 
+						
+											 <div class="divide-per"><p>(₹ {{amount/selectedFriends.length | number:'1.0-2'}}/person)</p></div>
+										</div>
+									</div>
+											
+											<div class="popup-footer">
+												<button type="button" class="btn btn-primary" (click)="addbill()" data-dismiss="modal">Save</button>
+												<button type="reset" class="btn btn-secondary" data-dismiss="modal" (click)="close()">Close</button>
+											</div>
+										</div>
+									
+								</div>
+								
+						</div>
+						<!-- <div class="dropa">
+								<button type="button" class="btn btn-secondary"> Settle Up </button>
+						</div> -->
+					</div></div>
+				<div class="expenseListScroll">			
+				<div class="main_e" *ngFor="let expense of expenses"> 
+						<div class="first_e">
+								<p class="date">{{expense.date| date:'MMM'}}</p><br>
+								<p class="date1">{{expense.date| date:'dd'}}</p>
+							</div> 
+					<div class="first_e">
+						<p class="description">{{expense.description}}</p>
+					</div>
+					
+					<div class="second_e">
+						<p class="totalpaidtitle"> Total Paid</p>
+						<p class="cost">₹ &nbsp;{{expense.amount | number:'1.0-2'}}</p>
+					</div>
+					
+					<div class="third_e">
+							<p class="paidby"> Paid by</p>
+							
+
+						<p class="you">{{expense.frd_name}}</p>
+					</div>
+					
+				</div>
+	
+				</div>
+
+    		</div>    		<div class="third">
+      				
+				<div class="a">
+					<div class="usermain">	
+							<ul class="friends">
+										<li class="user1"> <p class="fname">Total Group Expense </p></li>
+							</ul>	 
+					<ul class="friends">
+								<a class="view-link">
+
+
+
+									<li class="user"> <p class="fname">₹ &nbsp;{{group_of_total}}</p></li>
+								</a>
+								
+							
+							</ul>
+						</div>
+
+						<!-- Group Balances -->
+							<div class="usermain">	
+								<ul class="friends">
+											<li class="user1"> <p class="fname">GROUP BALANCES </p></li>
+										
+										
+									</ul>	 
+					          <ul class="friends">
+								<table>
+										<a class="view-link" *ngFor="let friend of membersBalance">
+
+												<tr>
+												  <th rowspan="2"><img src="./assets/user.png" class="userimg_balance"> </th>
+												  <th><p class="fname1">{{friend.name}}</p></th>
+												</tr>
+												<tr>
+												  <td><p class="frdtotal">₹ &nbsp;{{(friend.totalPay ? friend.totalPay - (friend.totalExpense ? friend.totalExpense: 0) : 0 - (friend.totalExpense ? friend.totalExpense: 0 )).toFixed(2)}}</p><br></td>
+												</tr>
+												</a>
+										</table>				
+								</ul> 
+
+					
+							</div>
+					</div>
+			</div>
+		</div>
+
+</div>

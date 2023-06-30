@@ -1,0 +1,102 @@
+#main
+{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    background-color: #d1cfcf;
+}
+.loginbox{
+    width: 400px;
+    height: 556px;
+    background: white;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border-radius: 15px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 74px 30px;
+    box-shadow: 2px 2px 2px 2px #5c2828;
+}
+p{
+    cursor: default;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.header{
+    font-family:Ubuntu;
+    color: #000000;
+    font-weight:bold;
+    margin: -10px;
+    padding: 0 10px 30px;
+    text-align: center;
+    font-size: 28px;
+}
+
+
+.txtheader {
+    font-family: Fixedsys;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #2b72e5;
+    font-size: 19px;
+}
+.txt{
+    width: 100%;
+    margin-bottom: 16px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #05090f;
+    font-size: 16px;
+}
+.btn{
+    margin-bottom: 5px;
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color:white;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+.btn:hover
+{
+    cursor: pointer;
+    background: #2999eb;   
+    color: #f0ececce;
+}
+.login{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #05090f;
+    font-size: 20px;
+}
+
+.login:hover
+{
+    color: #2b72e5;
+}
+.alert{
+    color: #ff0000;
+    font-size: 17px;
+}
+#alert{
+    color: #007bff;
+   
+}

@@ -1,0 +1,124 @@
+#main
+{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    background-color: #d1cfcf;
+}
+.loginbox{
+    width: 400px;
+    height: 453px;
+    background: white;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 15px;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    box-shadow: 2px 2px 2px 2px #b18b8b;
+}
+.showPassword{
+    color:#2b72e5;
+    margin: 0;
+    cursor: pointer;
+}
+.showPassCheck{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+p
+{
+    cursor:default;
+}
+.header{
+    font-family:Ubuntu;
+    color: #000000;
+    font-weight:bold;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 28px;
+}
+.txtheader{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #2b72e5;
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+.txt{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #05090f;
+    font-size: 16px;
+}
+.btn
+{
+    margin-bottom: 25px;
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.btn:hover
+{
+    cursor: pointer;
+    background: #2999eb;   
+    color: #f0ecec;;
+}
+.txtheader{
+    font-family: Fixedsys;
+}
+.signup{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #05090f;
+    font-size: 20px;
+    margin-left: 11px;
+    
+}
+
+.signup:hover{
+    color: #2b72e5;
+}
+.alert{
+    color: #ff0000;
+    font-size: 17px;
+}
+#alert{
+    color: #007bff;
+   
+}
